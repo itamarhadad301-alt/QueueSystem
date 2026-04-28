@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/QueueService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/QueueService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/QueueService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllBranches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranches" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllBranches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBranch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBranch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllServices" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetServicesByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetServicesByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddService_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TakeTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:TakeTicket" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TakeTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TakeTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetActiveTicketByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveTicketByUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetActiveTicketByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveTicketByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTicketsByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketsByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTicketsByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketsByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWaitingTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingTickets" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWaitingTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPositionInQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionInQueue" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPositionInQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionInQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTicketHistoryByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketHistoryByUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTicketHistoryByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketHistoryByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CallNextTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:CallNextTicket" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CallNextTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CallNextTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SkipTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SkipTicket" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SkipTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SkipTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CloseTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTicket" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CloseTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLogs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLogsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Register" message="tns:IService1_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterResponse" message="tns:IService1_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllBranches" message="tns:IService1_GetAllBranches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllBranchesResponse" message="tns:IService1_GetAllBranches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddBranch" message="tns:IService1_AddBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddBranchResponse" message="tns:IService1_AddBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBranch" message="tns:IService1_UpdateBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBranchResponse" message="tns:IService1_UpdateBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteBranch" message="tns:IService1_DeleteBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteBranchResponse" message="tns:IService1_DeleteBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllServices" message="tns:IService1_GetAllServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllServicesResponse" message="tns:IService1_GetAllServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetServicesByBranch" message="tns:IService1_GetServicesByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetServicesByBranchResponse" message="tns:IService1_GetServicesByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddService" message="tns:IService1_AddService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddServiceResponse" message="tns:IService1_AddService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateService" message="tns:IService1_UpdateService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateServiceResponse" message="tns:IService1_UpdateService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteService" message="tns:IService1_DeleteService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteServiceResponse" message="tns:IService1_DeleteService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllUsers" message="tns:IService1_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllUsersResponse" message="tns:IService1_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserById" message="tns:IService1_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserByIdResponse" message="tns:IService1_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUser" message="tns:IService1_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserResponse" message="tns:IService1_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUser" message="tns:IService1_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserResponse" message="tns:IService1_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TakeTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TakeTicket" message="tns:IService1_TakeTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TakeTicketResponse" message="tns:IService1_TakeTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTicketByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetActiveTicketByUser" message="tns:IService1_GetActiveTicketByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetActiveTicketByUserResponse" message="tns:IService1_GetActiveTicketByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketsByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTicketsByBranch" message="tns:IService1_GetTicketsByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTicketsByBranchResponse" message="tns:IService1_GetTicketsByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitingTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetWaitingTickets" message="tns:IService1_GetWaitingTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetWaitingTicketsResponse" message="tns:IService1_GetWaitingTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionInQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPositionInQueue" message="tns:IService1_GetPositionInQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPositionInQueueResponse" message="tns:IService1_GetPositionInQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketHistoryByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTicketHistoryByUser" message="tns:IService1_GetTicketHistoryByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTicketHistoryByUserResponse" message="tns:IService1_GetTicketHistoryByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CallNextTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CallNextTicket" message="tns:IService1_CallNextTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CallNextTicketResponse" message="tns:IService1_CallNextTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SkipTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SkipTicket" message="tns:IService1_SkipTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SkipTicketResponse" message="tns:IService1_SkipTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CloseTicket" message="tns:IService1_CloseTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CloseTicketResponse" message="tns:IService1_CloseTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllLogs" message="tns:IService1_GetAllLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllLogsResponse" message="tns:IService1_GetAllLogs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IService1/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranches">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllBranches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBranch">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServices">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesByBranch">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetServicesByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddService">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteService">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TakeTicket">
+      <soap:operation soapAction="http://tempuri.org/IService1/TakeTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTicketByUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetActiveTicketByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketsByBranch">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTicketsByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitingTickets">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetWaitingTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionInQueue">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPositionInQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketHistoryByUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTicketHistoryByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CallNextTicket">
+      <soap:operation soapAction="http://tempuri.org/IService1/CallNextTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipTicket">
+      <soap:operation soapAction="http://tempuri.org/IService1/SkipTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTicket">
+      <soap:operation soapAction="http://tempuri.org/IService1/CloseTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLogs">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8080/QueueService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+C:\Users\yhdd1\source\repos\QueueManagement\Model\bin\Debug\Model.dll
+C:\Users\yhdd1\source\repos\QueueManagement\Model\bin\Debug\Model.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\yhdd1\source\repos\QueueManagement\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\yhdd1\source\repos\QueueManagement\Model\obj\Debug\Model.dll
+C:\Users\yhdd1\source\repos\QueueManagement\Model\obj\Debug\Model.pdb

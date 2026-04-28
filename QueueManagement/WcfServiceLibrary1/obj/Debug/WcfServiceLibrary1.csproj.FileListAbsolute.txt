@@ -1,0 +1,16 @@
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\Database1.mdf
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\Database1_log.ldf
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.config
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\BLL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\DAL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\Model.dll
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\BLL.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\DAL.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\bin\Debug\Model.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csproj.AssemblyReference.cache
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\obj\Debug\WcfServi.DA96C48E.Up2Date
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.dll
+C:\Users\yhdd1\source\repos\QueueManagement\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb

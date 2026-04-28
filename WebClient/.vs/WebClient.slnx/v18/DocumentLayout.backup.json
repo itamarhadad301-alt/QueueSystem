@@ -1,0 +1,372 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\users.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\users.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\services.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\services.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\services.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\services.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\branches.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\branches.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\branches.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\branches.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\queue.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\queue.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\queue.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\queue.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\users.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\users.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\admin\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\admin\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\myticket.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\myticket.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\myticket.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\myticket.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\taketicket.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\taketicket.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\taketicket.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\taketicket.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|c:\\users\\yhdd1\\source\\repos\\webclient\\webclient\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{593333D9-0629-476A-8079-AB945BCBFE0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 67,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Users.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Users.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Users.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Users.aspx.cs",
+              "RelativeToolTip": "WebClient\\Admin\\Users.aspx.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:52:35.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Services.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Services.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Services.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Services.aspx.cs",
+              "RelativeToolTip": "WebClient\\Admin\\Services.aspx.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwFYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:51:58.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Services.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Services.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Services.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Services.aspx",
+              "RelativeToolTip": "WebClient\\Admin\\Services.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:51:45.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Branches.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Branches.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Branches.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Branches.aspx",
+              "RelativeToolTip": "WebClient\\Admin\\Branches.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:50:35.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Dashboard.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Dashboard.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Dashboard.aspx",
+              "RelativeToolTip": "WebClient\\Admin\\Dashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:50:07.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Branches.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Branches.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Branches.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Branches.aspx.cs",
+              "RelativeToolTip": "WebClient\\Admin\\Branches.aspx.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:50:44.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Register.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Register.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Register.aspx",
+              "RelativeToolTip": "WebClient\\Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:45:10.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Register.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Register.aspx.cs",
+              "RelativeToolTip": "WebClient\\Register.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:45:21.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Queue.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Queue.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Queue.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Queue.aspx.cs",
+              "RelativeToolTip": "WebClient\\Admin\\Queue.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:53:21.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Queue.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Queue.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Queue.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Queue.aspx",
+              "RelativeToolTip": "WebClient\\Admin\\Queue.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:53:16.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Users.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Users.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Users.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Users.aspx",
+              "RelativeToolTip": "WebClient\\Admin\\Users.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:52:26.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dashboard.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Dashboard.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Admin\\Dashboard.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Admin\\Dashboard.aspx.cs",
+              "RelativeToolTip": "WebClient\\Admin\\Dashboard.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:50:14.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MyTicket.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\MyTicket.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\MyTicket.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\MyTicket.aspx.cs",
+              "RelativeToolTip": "WebClient\\MyTicket.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:48:31.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MyTicket.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\MyTicket.aspx",
+              "RelativeDocumentMoniker": "WebClient\\MyTicket.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\MyTicket.aspx",
+              "RelativeToolTip": "WebClient\\MyTicket.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:48:21.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TakeTicket.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\TakeTicket.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\TakeTicket.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\TakeTicket.aspx.cs",
+              "RelativeToolTip": "WebClient\\TakeTicket.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:48:01.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TakeTicket.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\TakeTicket.aspx",
+              "RelativeDocumentMoniker": "WebClient\\TakeTicket.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\TakeTicket.aspx",
+              "RelativeToolTip": "WebClient\\TakeTicket.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:47:52.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Home.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Home.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Home.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Home.aspx.cs",
+              "RelativeToolTip": "WebClient\\Home.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:46:09.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Home.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Home.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Home.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Home.aspx",
+              "RelativeToolTip": "WebClient\\Home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:45:45.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "WebClient\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Login.aspx.cs",
+              "RelativeToolTip": "WebClient\\Login.aspx.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:43:37.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Login.aspx",
+              "RelativeDocumentMoniker": "WebClient\\Login.aspx",
+              "ToolTip": "C:\\Users\\yhdd1\\source\\repos\\WebClient\\WebClient\\Login.aspx",
+              "RelativeToolTip": "WebClient\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-28T13:43:19.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

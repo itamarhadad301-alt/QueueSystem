@@ -1,0 +1,13 @@
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\Database1.mdf
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\Database1_log.ldf
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\BLL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\BLL.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\DAL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\Model.dll
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\DAL.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\bin\Debug\Model.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\obj\Debug\BLL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\BLL\obj\Debug\BLL.pdb

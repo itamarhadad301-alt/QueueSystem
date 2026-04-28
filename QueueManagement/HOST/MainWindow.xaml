@@ -1,0 +1,20 @@
+﻿<Window x:Class="HOST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Queue Service Host"
+        Height="200" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"><Grid>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock x:Name="StatusText"
+                       Text="Starting service..."
+                       FontSize="16"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+        <TextBlock Text="http://localhost:8080/QueueService/"
+                       FontSize="12"
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"/>
+    </StackPanel>
+</Grid>
+</Window>

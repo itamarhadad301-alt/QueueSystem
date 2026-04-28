@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BLL/BLL.csproj" Id="6225dea2-c552-47d8-808e-d1243c60a752" />
+  <Project Path="DAL/DAL.csproj" Id="7de7bddc-0656-48f6-b543-67ad1ae13bbb" />
+  <Project Path="HOST/HOST.csproj" Id="ebe249f0-ac92-445d-969f-5e0bb5cd09ce" />
+  <Project Path="Model/Model.csproj" Id="edcc9ec8-efb4-4793-9497-35126a87d723" />
+  <Project Path="WcfServiceLibrary1/WcfServiceLibrary1.csproj" Id="81d788c8-0906-415d-a542-1dfe1c76b80a" />
+</Solution>

@@ -1,0 +1,11 @@
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\Database1.mdf
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\Database1_log.ldf
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\DAL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\Model.dll
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\bin\Debug\Model.pdb
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\obj\Debug\DAL.dll
+C:\Users\yhdd1\source\repos\QueueManagement\DAL\obj\Debug\DAL.pdb

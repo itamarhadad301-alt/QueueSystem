@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfBranch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Branch" nillable="true" type="tns:Branch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranch" nillable="true" type="tns:ArrayOfBranch" />
+  <xs:complexType name="Branch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Branch" nillable="true" type="tns:Branch" />
+  <xs:complexType name="ArrayOfService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Service" nillable="true" type="tns:Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfService" nillable="true" type="tns:ArrayOfService" />
+  <xs:complexType name="Service">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvgDuration" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServiceId" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service" nillable="true" type="tns:Service" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="QueueTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="CalledAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CompletedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ServiceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+      <xs:element minOccurs="0" name="TicketNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueueTicket" nillable="true" type="tns:QueueTicket" />
+  <xs:complexType name="ArrayOfQueueTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueueTicket" nillable="true" type="tns:QueueTicket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueueTicket" nillable="true" type="tns:ArrayOfQueueTicket" />
+  <xs:complexType name="ArrayOfCallLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CallLog" nillable="true" type="tns:CallLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCallLog" nillable="true" type="tns:ArrayOfCallLog" />
+  <xs:complexType name="CallLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalledAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CalledBy" type="xs:int" />
+      <xs:element minOccurs="0" name="LogId" type="xs:int" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CallLog" nillable="true" type="tns:CallLog" />
+</xs:schema>

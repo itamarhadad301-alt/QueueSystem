@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AdminClient/AdminClient.csproj" Id="6bbe2b89-2a7c-41bf-884d-63e47314d41a" />
+  <Project Path="QueueClients/RegularClient.csproj" Id="7eeb3b63-8a88-42f4-93f7-ef56aed1779f" />
+</Solution>
