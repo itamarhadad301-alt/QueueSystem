@@ -56,11 +56,12 @@ namespace DAL
             return s1;
         }
 
-        protected DataTable ExecuteSelect(string sql)
+        protected DataTable ExecuteSelect(string sql, params SqlParameter[] parameters)
         {
             DataTable table = new DataTable();
             SqlConnection conn = new SqlConnection(ConnectionString);
             SqlCommand cmd = new SqlCommand(sql, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters);
 
             try
             {
@@ -81,10 +82,11 @@ namespace DAL
             return table;
         }
 
-        protected int ExecuteNonQuery(string sql)
+        protected int ExecuteNonQuery(string sql, params SqlParameter[] parameters)
         {
             SqlConnection conn = new SqlConnection(ConnectionString);
             SqlCommand cmd = new SqlCommand(sql, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters);
 
             try
             {
@@ -102,10 +104,11 @@ namespace DAL
             }
         }
 
-        protected object ExecuteScalar(string sql)
+        protected object ExecuteScalar(string sql, params SqlParameter[] parameters)
         {
             SqlConnection conn = new SqlConnection(ConnectionString);
             SqlCommand cmd = new SqlCommand(sql, conn);
+            if (parameters != null) cmd.Parameters.AddRange(parameters);
 
             try
             {

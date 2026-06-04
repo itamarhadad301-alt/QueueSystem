@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using Model;
 
 namespace DAL
@@ -9,9 +10,10 @@ namespace DAL
     {
         public List<QueueTicket> GetTicketsByBranch(int branchId)
         {
-            string sql = $"SELECT * FROM QueueTickets WHERE BranchId = {branchId} " +
-                         $"ORDER BY TicketNumber";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM QueueTickets WHERE BranchId = @BranchId " +
+                         "ORDER BY TicketNumber";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@BranchId", branchId));
             List<QueueTicket> list = new List<QueueTicket>();
             foreach (DataRow row in dt.Rows)
             {
@@ -22,10 +24,12 @@ namespace DAL
 
         public List<QueueTicket> GetWaitingTickets(int branchId, int serviceId)
         {
-            string sql = $"SELECT * FROM QueueTickets WHERE BranchId = {branchId} " +
-                         $"AND ServiceId = {serviceId} AND Status = 'Waiting' " +
-                         $"ORDER BY TicketNumber";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM QueueTickets WHERE BranchId = @BranchId " +
+                         "AND ServiceId = @ServiceId AND Status = 'Waiting' " +
+                         "ORDER BY TicketNumber";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@BranchId", branchId),
+                new SqlParameter("@ServiceId", serviceId));
             List<QueueTicket> list = new List<QueueTicket>();
             foreach (DataRow row in dt.Rows)
             {
@@ -36,18 +40,20 @@ namespace DAL
 
         public QueueTicket GetActiveTicketByUser(int userId)
         {
-            string sql = $"SELECT * FROM QueueTickets WHERE UserId = {userId} " +
-                         $"AND Status IN ('Waiting', 'Called')";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM QueueTickets WHERE UserId = @UserId " +
+                         "AND Status IN ('Waiting', 'Called')";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@UserId", userId));
             if (dt.Rows.Count == 0) return null;
             return Map(dt.Rows[0]);
         }
 
         public List<QueueTicket> GetTicketHistoryByUser(int userId)
         {
-            string sql = $"SELECT * FROM QueueTickets WHERE UserId = {userId} " +
-                         $"ORDER BY CreatedAt DESC";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM QueueTickets WHERE UserId = @UserId " +
+                         "ORDER BY CreatedAt DESC";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@UserId", userId));
             List<QueueTicket> list = new List<QueueTicket>();
             foreach (DataRow row in dt.Rows)
             {
@@ -58,27 +64,35 @@ namespace DAL
 
         public int GetNextTicketNumber(int branchId, int serviceId)
         {
-            string sql = $"SELECT ISNULL(MAX(TicketNumber), 0) + 1 FROM QueueTickets " +
-                         $"WHERE BranchId = {branchId} AND ServiceId = {serviceId}";
-            return (int)ExecuteScalar(sql);
+            string sql = "SELECT ISNULL(MAX(TicketNumber), 0) + 1 FROM QueueTickets " +
+                         "WHERE BranchId = @BranchId AND ServiceId = @ServiceId";
+            return (int)ExecuteScalar(sql,
+                new SqlParameter("@BranchId", branchId),
+                new SqlParameter("@ServiceId", serviceId));
         }
 
         public int AddTicket(QueueTicket t)
         {
-            string sql = $"INSERT INTO QueueTickets (TicketNumber, UserId, ServiceId, BranchId, Status) " +
-                         $"VALUES ({t.TicketNumber}, {t.UserId}, {t.ServiceId}, {t.BranchId}, 'Waiting'); " +
-                         $"SELECT SCOPE_IDENTITY();";
-            return Convert.ToInt32(ExecuteScalar(sql));
+            string sql = "INSERT INTO QueueTickets (TicketNumber, UserId, ServiceId, BranchId, Status) " +
+                         "VALUES (@TicketNumber, @UserId, @ServiceId, @BranchId, 'Waiting'); " +
+                         "SELECT SCOPE_IDENTITY();";
+            return Convert.ToInt32(ExecuteScalar(sql,
+                new SqlParameter("@TicketNumber", t.TicketNumber),
+                new SqlParameter("@UserId", t.UserId),
+                new SqlParameter("@ServiceId", t.ServiceId),
+                new SqlParameter("@BranchId", t.BranchId)));
         }
 
         public void UpdateStatus(int ticketId, string status)
         {
-            string calledAt = (status == "Called") ? $", CalledAt = GETDATE()" : "";
+            string calledAt = (status == "Called") ? ", CalledAt = GETDATE()" : "";
             string completedAt = (status == "Done" || status == "Skipped")
-                                  ? $", CompletedAt = GETDATE()" : "";
-            string sql = $"UPDATE QueueTickets SET Status = '{status}'{calledAt}{completedAt} " +
-                         $"WHERE TicketId = {ticketId}";
-            ExecuteNonQuery(sql);
+                                  ? ", CompletedAt = GETDATE()" : "";
+            string sql = $"UPDATE QueueTickets SET Status = @Status{calledAt}{completedAt} " +
+                         "WHERE TicketId = @TicketId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@Status", status),
+                new SqlParameter("@TicketId", ticketId));
         }
 
         private QueueTicket Map(DataRow row)

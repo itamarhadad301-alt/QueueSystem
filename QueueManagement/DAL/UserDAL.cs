@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 
 
@@ -23,57 +24,81 @@ namespace DAL
 
         public User GetUserById(int userId)
         {
-            string sql = $"SELECT * FROM Users WHERE UserId = {userId}";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM Users WHERE UserId = @UserId";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@UserId", userId));
             if (dt.Rows.Count == 0) return null;
             return Map(dt.Rows[0]);
         }
 
         public User Login(string username, string password)
         {
-            string sql = $"SELECT * FROM Users WHERE Username = '{username}' " +
-                         $"AND Password = '{password}' AND IsActive = 1";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM Users WHERE Username = @Username " +
+                         "AND Password = @Password AND IsActive = 1";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@Username", username),
+                new SqlParameter("@Password", password));
             if (dt.Rows.Count == 0) return null;
             return Map(dt.Rows[0]);
         }
 
         public bool UsernameExists(string username, int excludeUserId = 0)
         {
-            string sql = $"SELECT COUNT(*) FROM Users WHERE Username = '{username}' AND UserId != {excludeUserId}";
-            int count = (int)ExecuteScalar(sql);
+            string sql = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND UserId != @ExcludeUserId";
+            int count = (int)ExecuteScalar(sql,
+                new SqlParameter("@Username", username),
+                new SqlParameter("@ExcludeUserId", excludeUserId));
             return count > 0;
         }
+
         public bool IsPhoneExists(string phone, int excludeUserId = 0)
         {
-            string sql = $"SELECT COUNT(*) FROM Users WHERE Phone = '{phone}' AND UserId != {excludeUserId}";
-            object result = ExecuteScalar(sql);
+            string sql = "SELECT COUNT(*) FROM Users WHERE Phone = @Phone AND UserId != @ExcludeUserId";
+            object result = ExecuteScalar(sql,
+                new SqlParameter("@Phone", phone),
+                new SqlParameter("@ExcludeUserId", excludeUserId));
             int count = Convert.ToInt32(result);
             return count != 0;
         }
 
         public void AddUser(User u)
         {
-            string sql = $"INSERT INTO Users (FirstName, LastName, Username, Password, Phone, Email, Role, IsActive) " +
-                         $"VALUES (N'{u.FirstName}', N'{u.LastName}', '{u.Username}', " +
-                         $"'{u.Password}', '{u.Phone}', '{u.Email}', '{u.Role}', 1)";
-            ExecuteNonQuery(sql);
+            string sql = "INSERT INTO Users (FirstName, LastName, Username, Password, Phone, Email, Role, IsActive) " +
+                         "VALUES (@FirstName, @LastName, @Username, @Password, @Phone, @Email, @Role, 1)";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@FirstName", u.FirstName),
+                new SqlParameter("@LastName", u.LastName),
+                new SqlParameter("@Username", u.Username),
+                new SqlParameter("@Password", u.Password),
+                new SqlParameter("@Phone", u.Phone ?? (object)DBNull.Value),
+                new SqlParameter("@Email", u.Email ?? (object)DBNull.Value),
+                new SqlParameter("@Role", u.Role));
         }
 
         public void UpdateUser(User u)
         {
-            string sql = $"UPDATE Users SET FirstName = N'{u.FirstName}', LastName = N'{u.LastName}', " +
-                         $"Username = '{u.Username}', Password = '{u.Password}', " +
-                         $"Phone = '{u.Phone}', Email = '{u.Email}', Role = '{u.Role}', " +
-                         $"IsActive = {(u.IsActive ? 1 : 0)} " +
-                         $"WHERE UserId = {u.UserId}";
-            ExecuteNonQuery(sql);
+            string sql = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, " +
+                         "Username = @Username, Password = @Password, " +
+                         "Phone = @Phone, Email = @Email, Role = @Role, " +
+                         "IsActive = @IsActive " +
+                         "WHERE UserId = @UserId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@FirstName", u.FirstName),
+                new SqlParameter("@LastName", u.LastName),
+                new SqlParameter("@Username", u.Username),
+                new SqlParameter("@Password", u.Password),
+                new SqlParameter("@Phone", u.Phone ?? (object)DBNull.Value),
+                new SqlParameter("@Email", u.Email ?? (object)DBNull.Value),
+                new SqlParameter("@Role", u.Role),
+                new SqlParameter("@IsActive", u.IsActive ? 1 : 0),
+                new SqlParameter("@UserId", u.UserId));
         }
 
         public void DeleteUser(int userId)
         {
-            string sql = $"DELETE FROM Users WHERE UserId = {userId}";
-            ExecuteNonQuery(sql);
+            string sql = "DELETE FROM Users WHERE UserId = @UserId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@UserId", userId));
         }
 
         private User Map(DataRow row)

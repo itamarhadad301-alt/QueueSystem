@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using Model;
 
 namespace DAL
@@ -21,10 +22,10 @@ namespace DAL
 
         public List<CallLog> GetLogsByDate(DateTime date)
         {
-            string d = date.ToString("yyyy-MM-dd");
-            string sql = $"SELECT * FROM CallLog WHERE CAST(CalledAt AS DATE) = '{d}' " +
-                         $"ORDER BY CalledAt DESC";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM CallLog WHERE CAST(CalledAt AS DATE) = @Date " +
+                         "ORDER BY CalledAt DESC";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@Date", date.Date));
             List<CallLog> list = new List<CallLog>();
             foreach (DataRow row in dt.Rows)
             {
@@ -35,10 +36,12 @@ namespace DAL
 
         public void AddLog(CallLog log)
         {
-            string notes = log.Notes ?? "";
-            string sql = $"INSERT INTO CallLog (TicketId, CalledBy, Notes) " +
-                         $"VALUES ({log.TicketId}, {log.CalledBy}, N'{notes}')";
-            ExecuteNonQuery(sql);
+            string sql = "INSERT INTO CallLog (TicketId, CalledBy, Notes) " +
+                         "VALUES (@TicketId, @CalledBy, @Notes)";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@TicketId", log.TicketId),
+                new SqlParameter("@CalledBy", log.CalledBy),
+                new SqlParameter("@Notes", log.Notes ?? ""));
         }
 
         private CallLog Map(DataRow row)

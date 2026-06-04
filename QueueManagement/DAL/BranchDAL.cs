@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using Model;
 
 namespace DAL
@@ -20,31 +21,39 @@ namespace DAL
 
         public Branch GetBranchById(int branchId)
         {
-            string sql = $"SELECT * FROM Branches WHERE BranchId = {branchId}";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM Branches WHERE BranchId = @BranchId";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@BranchId", branchId));
             if (dt.Rows.Count == 0) return null;
             return Map(dt.Rows[0]);
         }
 
         public void AddBranch(Branch b)
         {
-            string sql = $"INSERT INTO Branches (BranchName, Address, IsActive) " +
-                         $"VALUES (N'{b.BranchName}', N'{b.Address}', 1)";
-            ExecuteNonQuery(sql);
+            string sql = "INSERT INTO Branches (BranchName, Address, IsActive) " +
+                         "VALUES (@BranchName, @Address, 1)";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@BranchName", b.BranchName),
+                new SqlParameter("@Address", b.Address ?? (object)System.DBNull.Value));
         }
 
         public void UpdateBranch(Branch b)
         {
-            string sql = $"UPDATE Branches SET BranchName = N'{b.BranchName}', " +
-                         $"Address = N'{b.Address}', IsActive = {(b.IsActive ? 1 : 0)} " +
-                         $"WHERE BranchId = {b.BranchId}";
-            ExecuteNonQuery(sql);
+            string sql = "UPDATE Branches SET BranchName = @BranchName, " +
+                         "Address = @Address, IsActive = @IsActive " +
+                         "WHERE BranchId = @BranchId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@BranchName", b.BranchName),
+                new SqlParameter("@Address", b.Address ?? (object)System.DBNull.Value),
+                new SqlParameter("@IsActive", b.IsActive ? 1 : 0),
+                new SqlParameter("@BranchId", b.BranchId));
         }
 
         public void DeleteBranch(int branchId)
         {
-            string sql = $"DELETE FROM Branches WHERE BranchId = {branchId}";
-            ExecuteNonQuery(sql);
+            string sql = "DELETE FROM Branches WHERE BranchId = @BranchId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@BranchId", branchId));
         }
 
         private Branch Map(DataRow row)
