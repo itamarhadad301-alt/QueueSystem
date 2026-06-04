@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using Model;
 
 namespace DAL
@@ -20,8 +21,9 @@ namespace DAL
 
         public List<Service> GetServicesByBranch(int branchId)
         {
-            string sql = $"SELECT * FROM Services WHERE BranchId = {branchId} AND IsActive = 1";
-            DataTable dt = ExecuteSelect(sql);
+            string sql = "SELECT * FROM Services WHERE BranchId = @BranchId AND IsActive = 1";
+            DataTable dt = ExecuteSelect(sql,
+                new SqlParameter("@BranchId", branchId));
             List<Service> list = new List<Service>();
             foreach (DataRow row in dt.Rows)
             {
@@ -32,24 +34,33 @@ namespace DAL
 
         public void AddService(Service s)
         {
-            string sql = $"INSERT INTO Services (ServiceName, AvgDuration, BranchId, IsActive) " +
-                         $"VALUES (N'{s.ServiceName}', {s.AvgDuration}, {s.BranchId}, 1)";
-            ExecuteNonQuery(sql);
+            string sql = "INSERT INTO Services (ServiceName, AvgDuration, BranchId, IsActive) " +
+                         "VALUES (@ServiceName, @AvgDuration, @BranchId, 1)";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@ServiceName", s.ServiceName),
+                new SqlParameter("@AvgDuration", s.AvgDuration),
+                new SqlParameter("@BranchId", s.BranchId));
         }
 
         public void UpdateService(Service s)
         {
-            string sql = $"UPDATE Services SET ServiceName = N'{s.ServiceName}', " +
-                         $"AvgDuration = {s.AvgDuration}, BranchId = {s.BranchId}, " +
-                         $"IsActive = {(s.IsActive ? 1 : 0)} " +
-                         $"WHERE ServiceId = {s.ServiceId}";
-            ExecuteNonQuery(sql);
+            string sql = "UPDATE Services SET ServiceName = @ServiceName, " +
+                         "AvgDuration = @AvgDuration, BranchId = @BranchId, " +
+                         "IsActive = @IsActive " +
+                         "WHERE ServiceId = @ServiceId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@ServiceName", s.ServiceName),
+                new SqlParameter("@AvgDuration", s.AvgDuration),
+                new SqlParameter("@BranchId", s.BranchId),
+                new SqlParameter("@IsActive", s.IsActive ? 1 : 0),
+                new SqlParameter("@ServiceId", s.ServiceId));
         }
 
         public void DeleteService(int serviceId)
         {
-            string sql = $"DELETE FROM Services WHERE ServiceId = {serviceId}";
-            ExecuteNonQuery(sql);
+            string sql = "DELETE FROM Services WHERE ServiceId = @ServiceId";
+            ExecuteNonQuery(sql,
+                new SqlParameter("@ServiceId", serviceId));
         }
 
         private Service Map(DataRow row)
