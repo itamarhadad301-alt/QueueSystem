@@ -42,11 +42,12 @@ namespace DAL
             return Map(dt.Rows[0]);
         }
 
-        public bool UsernameExists(string username)
+        public bool UsernameExists(string username, int excludeUserId = 0)
         {
-            string sql = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+            string sql = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND UserId != @ExcludeUserId";
             int count = (int)ExecuteScalar(sql,
-                new SqlParameter("@Username", username));
+                new SqlParameter("@Username", username),
+                new SqlParameter("@ExcludeUserId", excludeUserId));
             return count > 0;
         }
 
@@ -77,14 +78,18 @@ namespace DAL
         public void UpdateUser(User u)
         {
             string sql = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, " +
-                         "Phone = @Phone, Email = @Email, " +
+                         "Username = @Username, Password = @Password, " +
+                         "Phone = @Phone, Email = @Email, Role = @Role, " +
                          "IsActive = @IsActive " +
                          "WHERE UserId = @UserId";
             ExecuteNonQuery(sql,
                 new SqlParameter("@FirstName", u.FirstName),
                 new SqlParameter("@LastName", u.LastName),
+                new SqlParameter("@Username", u.Username),
+                new SqlParameter("@Password", u.Password),
                 new SqlParameter("@Phone", u.Phone ?? (object)DBNull.Value),
                 new SqlParameter("@Email", u.Email ?? (object)DBNull.Value),
+                new SqlParameter("@Role", u.Role),
                 new SqlParameter("@IsActive", u.IsActive ? 1 : 0),
                 new SqlParameter("@UserId", u.UserId));
         }
