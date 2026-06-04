@@ -38,9 +38,9 @@ namespace DAL
             return Map(dt.Rows[0]);
         }
 
-        public bool UsernameExists(string username)
+        public bool UsernameExists(string username, int excludeUserId = 0)
         {
-            string sql = $"SELECT COUNT(*) FROM Users WHERE Username = '{username}'";
+            string sql = $"SELECT COUNT(*) FROM Users WHERE Username = '{username}' AND UserId != {excludeUserId}";
             int count = (int)ExecuteScalar(sql);
             return count > 0;
         }
@@ -63,7 +63,8 @@ namespace DAL
         public void UpdateUser(User u)
         {
             string sql = $"UPDATE Users SET FirstName = N'{u.FirstName}', LastName = N'{u.LastName}', " +
-                         $"Phone = '{u.Phone}', Email = '{u.Email}', " +
+                         $"Username = '{u.Username}', Password = '{u.Password}', " +
+                         $"Phone = '{u.Phone}', Email = '{u.Email}', Role = '{u.Role}', " +
                          $"IsActive = {(u.IsActive ? 1 : 0)} " +
                          $"WHERE UserId = {u.UserId}";
             ExecuteNonQuery(sql);

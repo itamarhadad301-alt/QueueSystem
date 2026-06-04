@@ -56,9 +56,9 @@ namespace BLL
         {
             if (string.IsNullOrWhiteSpace(u.FirstName) || string.IsNullOrWhiteSpace(u.LastName))
                 throw new System.Exception("First and last name are required");
-            if (_dal.UsernameExists(u.Username))
+            if (_dal.UsernameExists(u.Username, u.UserId))
                 throw new System.Exception("Username already exists");
-            if (_dal.IsPhoneExists(u.Phone))
+            if (_dal.IsPhoneExists(u.Phone, u.UserId))
                 throw new Exception("A user with this phone number already exists!");
             _dal.UpdateUser(u);
         }
